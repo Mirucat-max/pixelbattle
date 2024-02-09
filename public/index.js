@@ -1,5 +1,4 @@
-//const { Telegraf, Markup } = require("telegraf")
-//const bot = new Telegraf(/*"5911975320:AAFYiK-gJ1BcUirkEyCebTTQy1VcUqxoEdY"*/ "6197591525:AAGsDMqEPu-l7KzAAYJVciDQO8l1yuoS9hw")
+
 const express = require('express')
 const app = express()
 const http = require('http');
@@ -63,16 +62,6 @@ io.on("connection", (socket) => {
   socket.on("log", (a) => console.log(a))
 })
 
-
-/*
-bot.on("message", async (context) => {
-  context.reply("Привет! Принять участие в игре ты сможешь по кнопке ниже!", Markup.inlineKeyboard([
-    [Markup.button.webApp("PixelBattle", "https://pixelviatka.onrender.com/")]
-  ]))
-})
-
-bot.launch()
-*/
 server.listen(process.env.PORT || 4000, () => {
   console.log(`listening on port ${process.env.PORT || 4000} _<`)
 })
